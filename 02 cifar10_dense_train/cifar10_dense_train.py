@@ -26,7 +26,7 @@ network.add(layers.Dense(10, activation='softmax'))
 
 
 network.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-network.fit(x_train, y_train, epochs=20, batch_size=128, validation_data=(x_test, y_test))
+network.fit(x_train, y_train, epochs=20, batch_size=128, validation_split=0.2)
 
 
 test_loss, test_acc = network.evaluate(x_test, y_test)
